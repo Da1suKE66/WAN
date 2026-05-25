@@ -1,0 +1,23 @@
+{
+  "description": "Target Wan2.1 T2V 14B 720p baseline config for 100 prompts x 3 seeds. Requires a complete Wan2.1-T2V-14B checkpoint and enough free GPU memory before execution.",
+  "task": "t2v-14B",
+  "size": "1280*720",
+  "ckpt_dir": "/REPLACE_WITH_COMPLETE_Wan2.1-T2V-14B_CHECKPOINT",
+  "frame_num": 81,
+  "sample_steps": 50,
+  "sample_shift": 5.0,
+  "sample_guide_scale": 5.0,
+  "seeds": [1000, 1001, 1002],
+  "expected_prompt_count": 100,
+  "expected_seed_count": 3,
+  "min_free_gpu_mb": 65000,
+  "prompt_file": "experiments/wan_baseline/configs/prompts_100.jsonl",
+  "output_root": "experiments/wan_baseline/runs",
+  "run_name": "baseline_720p_t2v14b",
+  "extra_args": ["--t5_cpu", "--offload_model", "True"],
+  "monitor_interval_sec": 1.0,
+  "env": {
+    "TOKENIZERS_PARALLELISM": "false",
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"
+  }
+}
