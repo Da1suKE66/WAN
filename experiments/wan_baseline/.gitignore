@@ -14,9 +14,4 @@ scripts/__pycache__/
 !configs/*.jsonl
 !scripts/
 !scripts/*.py
-!checkpoints/
-!checkpoints/*/
-!checkpoints/*/config.json
-!checkpoints/*/*.pth
-!checkpoints/*/*.safetensors
-!checkpoints/*/google
+checkpoints/

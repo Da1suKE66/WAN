@@ -22,7 +22,7 @@ The requested 720p baseline is not complete yet. The remote machine currently ha
 - `run_smoke.sh`: runs the minimal smoke config.
 - `run_baseline_720p.sh`: runs the target 720p baseline config.
 - `requirements_overlay.txt`: small packages installed into the project-local overlay venv.
-- `checkpoints/Wan2.1-T2V-1.3B-linked`: symlink-only checkpoint view assembled from existing remote files; original checkpoint files are not modified.
+- `checkpoints/`: local-only checkpoint views or symlinks. This directory is ignored by git so absolute machine-local model paths are not uploaded. If using the Wan2.1 smoke config on a new server, create `checkpoints/Wan2.1-T2V-1.3B-linked` locally or edit `ckpt_dir` to point at a complete local checkpoint.
 
 ## Commands
 
