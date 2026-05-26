@@ -15,6 +15,12 @@ The model was downloaded successfully from Hugging Face mirror. A minimal 720P s
 
 ## Commands
 
+Portable setup on another server:
+
+```bash
+cat experiments/wan22_ti2v5b/SETUP_PORTABLE.md
+```
+
 Smoke:
 
 ```bash
@@ -40,6 +46,7 @@ Baseline real run:
 - `scripts/preflight_wan22_ti2v5b.py`: checks Wan2.2 code, model files, prompt/seed counts, official 720P size, and free GPU memory.
 - `scripts/run_wan22_batch.py`: runs Wan2.2 `generate.py`, saving per-result logs and JSONL metadata.
 - `requirements_overlay_wan22.txt`: extra packages installed into the shared overlay venv for Wan2.2 imports.
+- `SETUP_PORTABLE.md`: complete setup notes for cloning this repo, installing the environment, cloning Wan2.2 source, downloading weights, and running the smoke/baseline on another GPU server.
 
 ## Blocker
 
