@@ -1,0 +1,23 @@
+{
+  "description": "Wan2.2 TI2V-5B 720P baseline candidate for 100 prompts x 3 seeds. Official 720P size for TI2V is 1280*704.",
+  "code_dir": "experiments/wan22_ti2v5b/src/Wan2.2",
+  "task": "ti2v-5B",
+  "size": "1280*704",
+  "ckpt_dir": "experiments/wan22_ti2v5b/models/Wan2.2-TI2V-5B",
+  "frame_num": 121,
+  "sample_steps": 50,
+  "sample_shift": 5.0,
+  "sample_guide_scale": 5.0,
+  "seeds": [1000, 1001, 1002],
+  "prompt_file": "experiments/wan_baseline/configs/prompts_100.jsonl",
+  "expected_prompt_count": 100,
+  "expected_seed_count": 3,
+  "run_name": "baseline_720p_ti2v5b",
+  "output_root": "experiments/wan22_ti2v5b/runs",
+  "extra_args": ["--offload_model", "True", "--convert_model_dtype", "--t5_cpu"],
+  "min_free_gpu_mb": 24576,
+  "env": {
+    "TOKENIZERS_PARALLELISM": "false",
+    "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"
+  }
+}

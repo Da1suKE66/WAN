@@ -1,0 +1,17 @@
+src/
+models/
+runs/
+logs/
+preflight_reports/
+latest_smoke_run.txt
+__pycache__/
+*.pyc
+
+!README.md
+!requirements_overlay_wan22.txt
+!run_smoke_720p.sh
+!run_baseline_720p.sh
+!configs/
+!configs/*.json
+!scripts/
+!scripts/*.py
